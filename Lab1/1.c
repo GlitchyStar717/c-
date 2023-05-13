@@ -15,14 +15,20 @@
 
 void inputExpenditure(int start, int years, int expenditure[2][12])
 {
-    int i,j;
-
+    int i,j,k;
+    char *string;
     //Heading
-    printf ("|  Year  |   Jan    |  Feb    |  Mar    |  Apr    |  May    |  Jun    |  Jul    |  Aug    |  Sep    |  Oct    |  Nov    |  Dec    |  Sum    |  Avg    |\n");
+    string = "  Jan    |  Feb    |  Mar    |  Apr    |  May    |  Jun    |  Jul    |  Aug    |  Sep    |  Oct    |  Nov    |  Dec    |  Sum    |  Avg    |\n";
+
+    printf("Enter your data for : \n");
 
     for (i = 0; i < years; i++) {
-        printf("|  %-4d|",(start+i));
         for (j = 0; j < 12; j++){
+            printf("| %-4d |",(start+i));
+            for(k = 10*j; k < (10*j)+10; k++){
+                printf("%c",string[k]);
+            }
+            printf("  ");
             scanf("%d", &expenditure[i][j]);
         }
         printf("\n");
@@ -94,18 +100,14 @@ void calcYearlyExpenditure(int years, int expenditure[][12], int sum[], int aver
 int main()
 {
     int start, end;
-    // printf("Starting Year: ");
-    // scanf("%d", &start);
-    // printf("Ending year: ");
-    // scanf("%d", &end);
-    int years=2;
-    int expenditure[years][12], sum[years], average[years];
-
     printf("Starting Year: ");
-    scanf("%d", &start);
+    scanf(" %d", &start);
     printf("Ending year: ");
-    scanf("%d", &end);
-    years = end-start+1;
+    scanf( "%d", &end);
+    
+    int years = end-start+1;
+
+    int expenditure[years][12], sum[years], average[years];
 
 
 
