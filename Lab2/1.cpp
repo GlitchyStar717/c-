@@ -28,5 +28,7 @@ int main(){
 struct time t1;
 assignValues(&t1);
 printValues(&t1);
+
+return 0;
     
 }
