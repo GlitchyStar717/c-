@@ -22,12 +22,14 @@ namespace Square{
 }
 
 int main(){
-    cout<<"Give the number to be squared : "<<endl; 
-    cin >> Square::num; 
-    Square::fun(Square::num);
-    cout<<"Give the number to be cubed : "<<endl; 
-    cin >> Cube::num; 
-    Cube::fun(Cube::num);
+    Square::num = 12; 
+    Cube::num = 14; 
+
+    cout<<"The value stored in num of square numspace is : "<<Square::num<<endl;
+    cout<<"The value stored in num of cube numspace is : "<<Cube::num<<endl;
+
+    Square::fun(Cube::num);
+    Cube::fun(Square::num);
 
     return 0;
 }
