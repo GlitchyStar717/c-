@@ -9,27 +9,27 @@ using namespace std;
 void convert(){
     //takes no argument
     int feet,inch;    
-    cout<<"Enter value in feet"<<endl;
+    cout<<"Feet : ";
     cin>>feet;
-    cout<<"The value in inches is : "<<feet*12<<endl;
+    cout<<"Inch = "<<feet*12<<endl;
     
 } 
 
 void convert(int *feet){
     //takes one argument of type pointer of int
     int inch;    
-    cout<<"Enter value in feet"<<endl;
+    cout<<"Feet : ";
     cin>>*feet;
-    cout<<"The value in inches is : "<<(*feet)*12<<endl;
+    cout<<"Inch = "<<(*feet)*12<<endl;
     
 } 
 
 void convert(int feet, int inch){
     //takes two argument of type int feet and inch
-    cout<<"Enter value in feet"<<endl;
+    cout<<"Feet : ";
     cin>>feet;
     inch = feet*12;
-    cout<<"The value in inches is : "<<inch<<endl;
+    cout<<"Inch = "<<inch<<endl;
     
 } 
 

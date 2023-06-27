@@ -65,7 +65,7 @@ class triangle{
             p = 2*s;
         }
         void displayArea(){
-            calcArea();
+            // calcArea();
             cout<<"The area of the triangle is : "<< area<<endl;
         }
         void displayPerimeter(){

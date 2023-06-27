@@ -46,7 +46,7 @@ int main(){
         printf("Student's phone number : %s.\n", t[i].phone);
 
     }
-
+    
     fclose(file);
     
 }
