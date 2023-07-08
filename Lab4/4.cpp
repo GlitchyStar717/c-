@@ -40,10 +40,12 @@ int vehicle::num_vehicle=1;
 int vehicle::rate = 4500;
 
 int main(){
-
+    //copy constructor
     vehicle v1;
     vehicle v2(v1);
-    vehicle v[20];
+
+    //greater than 10
+    vehicle v[10];
 
     return 0;
 }

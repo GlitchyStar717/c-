@@ -11,8 +11,8 @@ class Time{
     private:
         int hours, minutes, seconds;
     public:
-    Time( int hh=0, int mm=0, int ss=0){
-        hours = hh; minutes = mm; seconds = ss;
+        Time( int hh=0, int mm=0, int ss=0){
+            hours = hh; minutes = mm; seconds = ss;
     }
     Time add(Time t){
         int sec_overflow, min_overflow;
@@ -20,7 +20,7 @@ class Time{
         out_t.seconds = (seconds+t.seconds) % 60;
         sec_overflow = (seconds+t.seconds) / 60;
         out_t.minutes = (minutes+t.minutes+sec_overflow) % 60;
-        min_overflow = (minutes+t.minutes) / 60;
+        min_overflow = (minutes+t.minutes+sec_overflow) / 60;
         out_t.hours = (hours+t.hours+min_overflow) % 24;
         return out_t;
     }
