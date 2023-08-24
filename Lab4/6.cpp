@@ -27,7 +27,7 @@ int main(){
     items i1, i2, i3;
     items::show_no_of_objects();
     items i4;
-    i4.showNoOfObjects();
+    i4.show_no_of_objects();
 
     return 0;
 }

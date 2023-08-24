@@ -1,13 +1,11 @@
- printf("\n______________________________________________________________________________________________________________________\n");
-    //     printf("|%-8s|","Sum");
-    //     for (i = 0; i < 12; i++){
-    //         printf(" %-7d|",sum[i]);
-    //     }
-    // // }
-    // // for (i=0 ; i < years; i++) {
-    //     printf("\n______________________________________________________________________________________________________________________\n");
-    //     printf("|%-8s|", "Average");
-    //     for (i = 0; i < 12; i++){
-    //         printf(" %-7d|",average[i]);
-    //     }
-    // // }
+// For Testing Automation
+void generateRandomExpenditure(int lower, int upper, int years, int expenditure[][12])
+{
+    int i,j, num;
+    for (i = 0; i < years; i++) {
+        for (j = 0; j < 12; j++){
+            num = (rand() % (upper - lower + 1)) + lower;
+            expenditure[i][j] = num;
+        }
+    }
+}

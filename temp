@@ -1,0 +1,6 @@
+char* strcat(const char* s1, const char* s2){
+    char *string;
+    string = new char[strlen(s1) + strlen(s2) + 1];
+    
+
+}
